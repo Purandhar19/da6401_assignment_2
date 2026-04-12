@@ -1,14 +1,13 @@
-"""Model package exports for Assignment-2 skeleton.
+import sys
+import os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-Import from this package in training/inference scripts to keep paths stable.
-"""
-
-from .layers import CustomDropout
-from .localization import VGG11Localizer
-from .classification import VGG11Classifier
-from .segmentation import VGG11UNet
-from .vgg11 import VGG11Encoder
-from .multitask import MultiTaskPerceptionModel
+from models.layers import CustomDropout
+from models.localization import VGG11Localizer
+from models.classification import VGG11Classifier
+from models.segmentation import VGG11UNet
+from models.vgg11 import VGG11Encoder
+from models.multitask import MultiTaskPerceptionModel
 
 __all__ = [
     "CustomDropout",

@@ -12,7 +12,7 @@ from typing import Dict, Tuple, Union
 import torch
 import torch.nn as nn
 
-from .layers import CustomDropout
+from models.layers import CustomDropout
 
 
 def _conv_bn_relu(in_ch: int, out_ch: int) -> nn.Sequential:

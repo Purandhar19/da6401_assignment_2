@@ -3,8 +3,8 @@
 import torch
 import torch.nn as nn
 
-from .vgg11 import VGG11Encoder
-from .layers import CustomDropout
+from models.vgg11 import VGG11Encoder
+from models.layers import CustomDropout
 
 
 class VGG11Classifier(nn.Module):
@@ -16,7 +16,7 @@ class VGG11Classifier(nn.Module):
         FC(4096 -> num_classes)
 
     Design justification:
-    - BatchNorm1d is placed *before* ReLU in the FC layers so normalisation
+    - BatchNorm1d is placed before ReLU in the FC layers so normalisation
       acts on pre-activations, which keeps them centred and avoids the
       dead-ReLU problem at scale.
     - CustomDropout is placed *after* the non-linearity (post-ReLU) so that

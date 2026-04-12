@@ -3,8 +3,8 @@
 import torch
 import torch.nn as nn
 
-from .vgg11 import VGG11Encoder
-from .layers import CustomDropout
+from models.vgg11 import VGG11Encoder
+from models.layers import CustomDropout
 
 
 class VGG11Localizer(nn.Module):
